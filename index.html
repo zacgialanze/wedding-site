@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zac &amp; Elena Wedding</title>
+  <!-- Link to existing stylesheet for colours and layout -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation bar -->
+  <header class="nav">
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#program">Program</a></li>
+        <li><a href="#details">Details</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="game.html">Game</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero section -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-heading">We Do</h1>
+      <h2 class="hero-names">Zac &amp; Elena</h2>
+      <p class="hero-date">Saturday • 21 February 2026</p>
+    </div>
+  </section>
+
+  <!-- Our Story section -->
+  <section id="story" class="story">
+    <h2>Our Story</h2>
+    <h3>From chance encounters to forever friends – here’s how our love blossomed.</h3>
+    <p>We first crossed paths on a summer adventure and soon realised our lives were meant to intertwine. Years of laughter, travel and shared dreams brought us closer together. From late‑night road trips in a yellow Transit van to climbing real mountains and overcoming figurative ones, our bond has only grown stronger. We can’t wait to begin the next chapter surrounded by those we love most.</p>
+  </section>
+
+  <!-- Program timeline section -->
+  <section id="program" class="program">
+    <h2>Program</h2>
+    <p>Join us for our special day – here’s how it unfolds</p>
+    <ul class="timeline">
+      <li><strong>3:30–3:55 PM</strong> – Shuttle Service: Continuous shuttle trips from Nowra Entertainment Centre to Figbird Cottage.</li>
+      <li><strong>4:00 PM</strong> – Ceremony: Join us at Figbird Cottage as we exchange our vows.</li>
+      <li><strong>6:00 PM</strong> – Dinner: Enjoy a delicious dinner with us.</li>
+      <li><strong>8:00 PM</strong> – Cake &amp; First Dance: Join us for our first dance and cake cutting.</li>
+      <li><strong>10:30 PM</strong> – Farewell: Say goodnight and thank you for celebrating with us.</li>
+      <li><strong>10:00–11:00 PM</strong> – Late‑night Shuttle: Free shuttles depart for Nowra and local drop‑offs.</li>
+    </ul>
+  </section>
+
+  <!-- Details section -->
+  <section id="details" class="details">
+    <h2>Details</h2>
+    <h3>Dress Attire</h3>
+    <p><strong>DRESS ATTIRE – NO black dresses or shirts.</strong> Our ceremony and reception are held outdoors on lawn, so stilettos aren’t the best option.</p>
+    <h3>Transportation</h3>
+    <p>Parking at Figbird Cottage is limited and taxis are scarce, so please <strong>car‑pool</strong> where possible. We’ve arranged a <strong>free shuttle bus</strong> making <strong>multiple trips between 3:30&nbsp;PM and 4:00&nbsp;PM</strong> from the <em>Nowra Entertainment Centre</em> to Figbird Cottage. There is plenty of parking at the Entertainment Centre. All guests must leave Figbird by <strong>11:00&nbsp;PM</strong>. If you’d like a lift back into town or to a nearby local address, simply tick the <em>late‑night shuttle</em> option on your RSVP and include your drop‑off street so we can plan routes.</p>
+    <h3>Accommodation</h3>
+    <p>We haven’t reserved accommodation, so please book early – weekends in the Shoalhaven region fill up fast. Great options in <strong>Nowra</strong> include <a href="https://www.questapartments.com.au/properties/nsw/nowra/quest-nowra/overview" target="_blank">Quest Nowra</a> (around <em>$220/night</em>), <a href="https://www.parkhaven.com.au/" target="_blank">Parkhaven Motel</a> (~<em>$180/night</em>) and <a href="https://www.nightcaphotels.com.au/hotels/nsw/archer" target="_blank">Nightcap at Archer</a> (~<em>$190/night</em>). You’ll also find plenty of charming Airbnbs and holiday cottages in Nowra, Bomaderry and nearby coastal towns like Huskisson, Culburra and Shoalhaven Heads from around <em>$250/night</em>.</p>
+  </section>
+
+  <!-- RSVP section -->
+  <section id="rsvp" class="rsvp">
+    <h2>RSVP</h2>
+    <p>Please respond by 15 January&nbsp;2026.</p>
+    <form id="rsvpForm">
+      <!-- Guest rows will be injected here -->
+      <div id="guestListContainer"></div>
+      <button type="button" id="addGuestBtn">+ Add another guest</button>
+      <!-- Attendance -->
+      <fieldset class="attendance-fieldset">
+        <legend>Will you honour us with your presence on this special day?</legend>
+        <label><input type="radio" name="attendance" value="yes" required> Yes, I’d love to!</label>
+        <label><input type="radio" name="attendance" value="no" required> Sadly, I won’t be able to attend.</label>
+      </fieldset>
+      <!-- Bring guest -->
+      <fieldset class="bring-guest-fieldset">
+        <legend>Will you be bringing a guest to share this special moment?</legend>
+        <label><input type="radio" name="bringGuest" value="yes" required> Yes, I’ll have someone joining me!</label>
+        <label><input type="radio" name="bringGuest" value="no" required checked> No, I’ll be attending on my own.</label>
+      </fieldset>
+      <!-- Late-night shuttle option -->
+      <div class="form-group">
+        <label><input type="checkbox" id="lateShuttle" name="lateShuttle"> I’ll need a late‑night shuttle</label>
+      </div>
+      <div class="form-group" id="shuttleAddressGroup" style="display:none;">
+        <label for="shuttleAddress">Drop‑off street</label>
+        <input type="text" id="shuttleAddress" name="shuttleAddress" placeholder="Street or suburb (optional)">
+      </div>
+      <!-- Song suggestion -->
+      <div class="form-group">
+        <label for="song">Song suggestion (title &amp; artist)</label>
+        <input type="text" id="song" name="song" placeholder="Optional">
+      </div>
+      <!-- Message -->
+      <div class="form-group">
+        <label for="message">Message to the couple</label>
+        <textarea id="message" name="message" rows="3" placeholder="Optional"></textarea>
+      </div>
+      <!-- Submit -->
+      <button type="submit">Submit RSVP</button>
+    </form>
+    <p id="rsvpMessage" class="rsvp-message"></p>
+  </section>
+
+  <!-- Gallery section -->
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div id="galleryContainer"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Zac &amp; Elena Wedding</p>
+  </footer>
+  <!-- Scripts -->
+  <script src="galleryImages.js"></script>
+  <script src="rsvp.js"></script>
+</body>
+</html>
